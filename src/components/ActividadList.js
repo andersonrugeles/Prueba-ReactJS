@@ -7,7 +7,13 @@ import './styles/ActividadList.css';
 class ActividadListItem extends React.Component {
 
   render() {
+    if(this.props.actividades.Realizada==true){
+      let img = document.getElementsByClassName('ActividadListItem');
+      console.log(img);
+     // document.querySelectorAll('.ActividadListItem').styles.backgroundColor = "rgba(0, 0, 0, 0.24)";
+    }
     return (
+    
       <div className="ActividadListItem" id="ActividadListItem">
        <div>
           <strong>
@@ -65,8 +71,8 @@ function ActividadList(props) {
       </div>
     );
   }
-
   return (
+    
     <div className="ActividadList">
       <div className="form-group">
         <label>Buscar Actividad</label>

@@ -14,8 +14,7 @@ function ActividadDetalle(props) {
     }else{
       actividad.Realizada=false;
     }
- 
-  await api.actividades.update(id,actividad);
+    await api.actividades.update(id,actividad);
   
   }
   return (
