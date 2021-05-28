@@ -15,6 +15,7 @@ class ActividadEditar extends React.Component {
       Nombre: '',
       Descripcion: '',
       Frase: '',
+      Realizada:'',
      
     },
   };

@@ -5,14 +5,13 @@ import './styles/ActividadList.css';
 
 
 class ActividadListItem extends React.Component {
+
   render() {
     return (
-      <div className="ActividadListItem">
-  
-
-        <div>
+      <div className="ActividadListItem" id="ActividadListItem">
+       <div>
           <strong>
-            {this.props.actividades.Nombre}
+          {this.props.actividades.Nombre}
           </strong>
           <br />{this.props.actividades.Descripcion}
           <br />
@@ -22,7 +21,6 @@ class ActividadListItem extends React.Component {
     );
   }
 }
-
 function useSearchActividades(actividades) {
   const [query, setQuery] = React.useState('');
   const [filteredActividades, setFilteredBadges] = React.useState(actividades);
@@ -91,7 +89,9 @@ function ActividadList(props) {
                 to={`/actividades/${actividades.id}`}
               >
                 <ActividadListItem actividades={actividades} />
+           
               </Link>
+                      
             </li>
           );
         })}

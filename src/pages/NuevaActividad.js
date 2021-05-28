@@ -14,6 +14,7 @@ class NuevaActividad extends React.Component {
       Nombre: '',
       Descripcion: '',
       Frase: '',
+      Realizada:false
      },
      frase:[]
     

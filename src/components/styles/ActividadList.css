@@ -10,6 +10,12 @@
   display: flex;
   padding: 1rem;
 }
+.btn-marcar{
+  width: 100%;
+  color: white;
+  background-color: #CD4040;
+  border: 0px;
+}
 
 .ActividadListItem__avatar {
   border-radius: 50%;
