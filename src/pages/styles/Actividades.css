@@ -1,0 +1,40 @@
+.Actividades__hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+  background:  #1B1B25;
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+}
+
+.Actividades__hero>.Actividades__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col-pendiente,.col-realizada{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.Actividades__container .container,.row{
+  height: 100%;
+}
+
+.Actividades__container {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  color: white;
+  margin-top: 20px;
+}
+
+
+.Actividades__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}

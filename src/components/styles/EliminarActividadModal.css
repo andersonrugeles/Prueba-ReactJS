@@ -1,0 +1,12 @@
+.EliminarActividadModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 10rem;
+}
+
+.EliminarActividadModal button+button {
+  margin-left: 1rem;
+}

@@ -1,0 +1,13 @@
+.Inicio {
+  width: 100%;
+  background: black;
+  background-repeat: repeat;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.Inicio .row{
+  justify-content: center;
+}
+
