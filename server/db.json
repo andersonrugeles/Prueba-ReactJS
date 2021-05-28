@@ -5,14 +5,14 @@
       "Nombre": "Zoe",
       "Descripcion": "Grantj2",
       "Frase": "ZoeGrant@example.com",
-      "Realizada":false
+      "Realizada": false
     },
     {
       "Nombre": "Tarea Julian",
       "Descripcion": "Realizar tarea matematicas",
       "Frase": "Gato",
       "id": "X8O5sm4",
-      "Realizada":false
+      "Realizada": false
     }
   ]
 }

@@ -6,5 +6,5 @@ import './global.css';
 import App from './components/App';
 
 const container = document.getElementById('app');
-
+//git push -u origin main
 ReactDOM.render(<App />, container);

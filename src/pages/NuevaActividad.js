@@ -16,6 +16,7 @@ class NuevaActividad extends React.Component {
       Frase: '',
      },
      frase:[]
+    
   };
   componentDidMount(){
     this.obtener();
@@ -26,7 +27,7 @@ class NuevaActividad extends React.Component {
     const response=await fetch(url);
     const responseJSON=await response.json();
     this.setState({frase:responseJSON.data});
-        
+  
     
   }
   handleChange = e => {
@@ -77,6 +78,7 @@ class NuevaActividad extends React.Component {
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
+                formFrases={this.state.frase}
                 error={this.state.error}
               />
             </div>

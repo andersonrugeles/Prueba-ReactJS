@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './styles/Badges.css';
+import './styles/Actividades.css';
 import ActividadList from '../components/ActividadList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';

@@ -34,16 +34,13 @@ class ActividadForm extends React.Component {
 
           <div className="form-group">
             <label>Frase</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="text"
-              name="Frase"
-              value={this.props.formValues.Frase}
-            />
+            <select className="form-control" aria-label="Default select example" name="Frase" onChange={this.props.onChange}>
+            {this.props.formFrases.map((item) =>
+            <option value={item.breed}>{item.breed}</option>
+            )}
+          </select>
           </div>
-
-      
+       
 
           <button onClick={this.handleClick} className="btn btn-primary">
             Guardar
