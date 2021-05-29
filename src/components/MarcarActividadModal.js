@@ -2,16 +2,17 @@ import React from 'react';
 
 import Modal from './Modal';
 
-function EliminarActividadModal(props) {
+function MarcarActividadModal(props) {
+    
   return (
     <Modal isOpen={props.isOpen} onClose={props.onClose}>
       <div className="EliminarActividadModal">
-        <h1>Estas seguro?</h1>
-        <p>Eliminar la actividad.</p>
+        <h1>Estas Seguro?</h1>
+        <p>Marcaras la actividad como realizada</p>
 
         <div>
-          <button onClick={props.onDeleteActividad} className="btn btn-danger mr-4">
-            Eliminar
+          <button onClick={props.onMarcarActividad} className="btn btn-danger mr-4">
+            Marcar
           </button>
           <button onClick={props.onClose} className="btn btn-primary">
             Cancelar
@@ -22,4 +23,4 @@ function EliminarActividadModal(props) {
   );
 }
 
-export default EliminarActividadModal;
+export default MarcarActividadModal;

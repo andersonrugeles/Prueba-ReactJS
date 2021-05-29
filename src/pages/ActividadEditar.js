@@ -18,10 +18,21 @@ class ActividadEditar extends React.Component {
       Realizada:'',
      
     },
+    frase:[]
   };
 
   componentDidMount() {
     this.fetchData();
+    this.obtener();
+  }
+
+  obtener=async()=> {
+    const url='https://catfact.ninja/breeds';
+    const response=await fetch(url);
+    const responseJSON=await response.json();
+    this.setState({frase:responseJSON.data});
+  
+    
   }
 
   fetchData = async e => {
@@ -74,6 +85,7 @@ class ActividadEditar extends React.Component {
                 Nombre={this.state.form.Nombre}
                 Descripcion={this.state.form.Descripcion}
                 Frase={this.state.form.Frase}
+              
                 
               />
             </div>
@@ -84,6 +96,7 @@ class ActividadEditar extends React.Component {
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
+                formFrases={this.state.frase}
                 error={this.state.error}
               />
             </div>

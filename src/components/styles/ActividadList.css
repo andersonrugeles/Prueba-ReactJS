@@ -10,6 +10,17 @@
   display: flex;
   padding: 1rem;
 }
+.Texto-busqueda{
+  color: black;
+}
+.ActividadListItemRealizada{
+  background:rgba(63, 104, 10);
+  color: black;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  display: flex;
+  padding: 1rem;
+}
 .btn-marcar{
   width: 100%;
   color: white;

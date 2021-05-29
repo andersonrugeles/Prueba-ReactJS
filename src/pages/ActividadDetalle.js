@@ -5,18 +5,11 @@ import './styles/actividadDetalle.css';
 import Actividad from '../components/Actividad';
 import EliminarActividadModal from '../components/EliminarActividadModal';
 import Navbar from '../components/Navbar';
-import api from '../api';
+import MarcarActividadModal from '../components/MarcarActividadModal';
+
 function ActividadDetalle(props) {
   const actividad = props.actividad;
-  async function marcar(id){
-    if(actividad.Realizada==false){
-      actividad.Realizada=true;
-    }else{
-      actividad.Realizada=false;
-    }
-    await api.actividades.update(id,actividad);
-  
-  }
+
   return (
     <div>
    <Navbar/>
@@ -42,9 +35,14 @@ function ActividadDetalle(props) {
                 </Link>
               </div>
               <div>
-              <button onClick={marcar(actividad.id)} className="btn btn-danger mb-4">
+              <button onClick={props.onOpenModalMarcar} className="btn btn-danger mb-4">
                   Realizada
                 </button>
+                <MarcarActividadModal
+                  isOpen={props.ModalisOpenMarcar}
+                  onClose={props.onCloseModalMarcar}
+                  onMarcarActividad={props.onMarcarActividad}
+                />
               </div>
 
               <div>
@@ -54,7 +52,7 @@ function ActividadDetalle(props) {
               <EliminarActividadModal
                   isOpen={props.modalIsOpen}
                   onClose={props.onCloseModal}
-                  onDeleteBadge={props.onDeleteBadge}
+                  onDeleteActividad={props.onDeleteActividad}
                 />
               </div>
             </div>

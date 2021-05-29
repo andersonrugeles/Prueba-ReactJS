@@ -7,14 +7,22 @@ import './styles/ActividadList.css';
 class ActividadListItem extends React.Component {
 
   render() {
-    if(this.props.actividades.Realizada==true){
-      let img = document.getElementsByClassName('ActividadListItem');
-      console.log(img);
-     // document.querySelectorAll('.ActividadListItem').styles.backgroundColor = "rgba(0, 0, 0, 0.24)";
-    }
+
     return (
-    
-      <div className="ActividadListItem" id="ActividadListItem">
+      <React.Fragment>
+      {this.props.actividades.Realizada == false ?
+        <div className="ActividadListItem">
+        <div>
+           <strong>
+           {this.props.actividades.Nombre}
+           </strong>
+           <br />{this.props.actividades.Descripcion}
+           <br />
+           {this.props.actividades.Frase}
+         </div>
+       </div>
+       :
+       <div className="ActividadListItemRealizada">
        <div>
           <strong>
           {this.props.actividades.Nombre}
@@ -22,8 +30,12 @@ class ActividadListItem extends React.Component {
           <br />{this.props.actividades.Descripcion}
           <br />
           {this.props.actividades.Frase}
+          <br/>
+          <h5>Actividad Realizada</h5>
         </div>
       </div>
+      }
+      </React.Fragment>
     );
   }
 }
@@ -33,7 +45,7 @@ function useSearchActividades(actividades) {
 
   React.useMemo(() => {
     const result = actividades.filter(actividades => {
-      return `${actividades.Nombre} ${actividades.Descripcion}`
+      return `${actividades.Descripcion}`
         .toLowerCase()
         .includes(query.toLowerCase());
     });
@@ -64,7 +76,7 @@ function ActividadList(props) {
           />
         </div>
 
-        <h3>No hemos encontrado ninguna actividad</h3>
+        <h3 className="Texto-busqueda">No hemos encontrado ninguna actividad</h3>
         <Link className="btn btn-primary" to="/actividad/nueva">
           Crear Nueva Actividad
         </Link>
